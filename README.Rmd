@@ -7,11 +7,11 @@ output: html_document
 
 To run the script execute the following steps:
 
-1 - Set your working directory
-2 - Clone repo with url: https://github.com/slaborde/GCDProject.git using: git clone https://github.com/slaborde/GCDProject.git
-3 - Place the folder "UCI HAR Dataset" with all its files in your working directory
-4 - Run script in R: source("run_analysis.R")
-5 - Read the output from file "tidyData.txt": 
+li 1 - Set your working directory
+li 2 - Clone repo with url: https://github.com/slaborde/GCDProject.git using: li git clone https://github.com/slaborde/GCDProject.git
+li 3 - Place the folder "UCI HAR Dataset" with all its files in your working directory
+li 4 - Run script in R: source("run_analysis.R")
+li 5 - Read the output from file "tidyData.txt": 
 
 using i.e the following code:
 
