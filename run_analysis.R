@@ -1,12 +1,19 @@
 ## Functions
+
+## From the features dataset returns an index vector of the interested features
+## those which match the regex "-mean\\()|-std\\()" 
 getMeasurementsIndex <- function(features) {
   grep("-mean\\()|-std\\()",features$V2,ignore.case=FALSE)
 }
-  
+
+## Returns the name of the activity x i.e walking
+## This funcion is used by lapply function in the main script
 nameActivity <- function(x, activity_names) {
   activity_names[x]
 }
 
+## Replace the variables columns names of the X datasets
+## the indexes vector is obtained with nameActivity function
 replaceVariablesNames <- function(X, indexes, features) {
   for(i in seq_along(indexes)) {
     names(X)[i+1] <- as.character(features$V2[indexes[i]])
@@ -58,15 +65,26 @@ X <- cbind(activity, X)
 ## 4 - Appropriately labels the data set with descriptive variable names
 X <- replaceVariablesNames(X, measures_variables, features)
 
-## 5 -  creates a second, independent tidy data set with the average of each 
+## 5 -  Creates a second, independent tidy data set with the average of each 
 ##      variable for each activity and each subject
 
 ## append the subject column variable until now not needed
 subject <- rbind(subject_train, subject_test)
 X <- cbind(subject = subject$V1, X)
+
 library("reshape2")
+## Melt de Data by ids subject and activity and getting others feature variables
+## as measure variables, then for each row we have
+## subject S doing A activity with a measure variable
 Xmelt <- melt(X, id = c("subject","activity"))
+
+## Cast the Melted Dataset to give the desired shape in a new Dataset
+## for a subject S doing actvity A we have the mean on the 66 features variables
+## of the original Dataset
 tidyData <- dcast(Xmelt, subject + activity ~ variable, mean)
 
 ## Write the Dataset to a file
 write.table(tidyData, "tidyData.txt", sep = " ", row.names = FALSE)
+
+
+
