@@ -1,24 +1,26 @@
 ---
-title: "Getting and Cleaning Data"
+title: "readme"
 author: "Sebastian Laborde"
 date: "Tuesday, September 16, 2014"
+output: html_document
 ---
 
 ### To run the script execute the following steps:
 
-1. Set your working directory
-2. Clone repo with url: https://github.com/slaborde/GCDProject.git using: git clone https://github.com/slaborde/GCDProject.git </ol>
-3. Place the folder "UCI HAR Dataset" with all its files in your working directory
-4. Run script in R: source("run_analysis.R")
-5. Read the output from file "tidyData.txt": 
+<ol>Set your working directory </ol>
+<ol>Clone repo with url: https://github.com/slaborde/GCDProject.git using: git clone https://github.com/slaborde/GCDProject.git </ol>
+
+li 3 - Place the folder "UCI HAR Dataset" with all its files in your working directory
+li 4 - Run script in R: source("run_analysis.R")
+li 5 - Read the output from file "tidyData.txt": 
 
 using i.e the following code:
 
-* Read the tidyData output
-	test_data <- read.table("tidyData.txt", header = TRUE)
-	View(test_data)
+### Read the tidyData output
+test_data <- read.table("tidyData.txt", header = TRUE)
+View(test_data)
 
-### Notes:
-* Step 4 will take about 15 seconds running and will produce the output file "tidyData.txt"
-* The output will be a dataser with 68 columns (subject, activity, the mean of the 66 features) and 180 rows (6 activities per subject with 30 subject so 30 x 6 = 180)
+Notes:
+Step 4 will take about 15 seconds running and will produce the output file "tidyData.txt"
+
 
