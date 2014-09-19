@@ -2,21 +2,105 @@
 title: "CodeBook"
 author: "Sebastian Laborde"
 date: "Tuesday, September 16, 2014"
-output: html_document
 ---
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+1. Subject
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Subject ID : 1..30
 
-```{r}
-summary(cars)
-```
+2. activity
 
-You can also embed plots, for example:
+Activity Name:
 
-```{r, echo=FALSE}
-plot(cars)
-```
+* WALKING
+* WALKING_UPSTAIRS
+* WALKING_DOWNSTAIRS
+* SITTING
+* STANDING
+* LAYING
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### The following variables represents the Mean for each activity and subject
+
+Description of the variables: The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions. 
+
+Features values are normalized and bounded within [-1,1].
+
+mean(): Mean value
+std(): Standard deviation
+
+3. tBodyAcc-XYZ-mean()
+
+4. tBodyAcc-XYZ-std()
+
+5. tGravityAcc-XYZ-mean()
+
+6. tGravityAcc-XYZ-std()
+
+7. tBodyAccJerk-XYZ-mean()
+
+8. tBodyAccJerk-XYZ-std()
+
+9. tBodyGyro-XYZ-mean()
+
+10. tBodyGyro-XYZ-std()
+
+11. tBodyGyroJerk-XYZ-mean()
+
+12. tBodyGyroJerk-XYZ-std()
+
+13. tBodyAccMag-mean()
+
+14. tBodyAccMag-std()
+
+15. tGravityAccMag-mean()
+
+16. tGravityAccMag-std()
+
+17. tBodyAccJerkMag-mean()
+
+18. tBodyAccJerkMag-std()
+
+19. tBodyGyroMag-mean()
+
+20. tBodyGyroMag-std()
+
+21. tBodyGyroJerkMag-mean()
+
+22. tBodyGyroJerkMag-std()
+
+23. fBodyAcc-XYZ-mean()
+
+24. fBodyAcc-XYZ-std()
+
+25. fBodyAccJerk-XYZ-mean()
+
+26. fBodyAccJerk-XYZ-std()
+
+27. fBodyGyro-XYZ-mean()
+
+28. fBodyGyro-XYZ-std()
+
+29. fBodyAccMag-mean()
+
+30. fBodyAccMag-std()
+
+31. fBodyAccJerkMag-mean()
+
+32. fBodyAccJerkMag-std()
+
+33. fBodyGyroMag-mean()
+
+34. fBodyGyroMag-std()
+
+35. fBodyGyroJerkMag-mean()
+
+36. fBodyGyroJerkMag-std()
+
+
